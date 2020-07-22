@@ -11,7 +11,7 @@ const AsideContent:React.FC = () =>{
     useEffect(() =>{
         const date = new Date();
         setDay(date);
-    },[day]);
+    },[]);
 
     const FormatedDate = useMemo(() => {
         return format(day, "d' de 'MMMM' de 'yyyy",{
@@ -36,26 +36,7 @@ const AsideContent:React.FC = () =>{
                     <p>12:00-13:000</p>
                     <span>Reunião de trabalho</span>
                 </CardContent>
-                <CardContent>
-                    <p>12:00-13:000</p>
-                    <span>Reunião de trabalho</span>
-                </CardContent>
-            </Content>
-
-            <Content>
-                <h3>Tarde</h3>
-                <CardContent>
-                    <p>12:00-13:000</p>
-                    <span>Reunião de trabalho</span>
-                </CardContent>
-                <CardContent>
-                    <p>12:00-13:000</p>
-                    <span>Reunião de trabalho</span>
-                </CardContent>
-                <CardContent>
-                    <p>12:00-13:000</p>
-                    <span>Reunião de trabalho</span>
-                </CardContent>
+                
             </Content>
 
 

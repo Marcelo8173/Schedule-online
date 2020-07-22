@@ -1,11 +1,52 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const lights = keyframes`
+   15%{
+        box-shadow: 0px 2px 25px 0px rgba(255,255,255, 0.7);
+    }
+    25%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.9)
+    }
+    35%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.8);
+    }
+    45%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.7);
+    }
+    55%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.6);
+    }
+    65%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.5);
+    }
+    75%{
+        box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.3);
+    }
+    
+`;
+
+const appearFromLeft = keyframes`
+    from{
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-430px);
+    }
+`;
 
 export const Container = styled.div`
+    flex: 1;
     width: 100%;
     margin-top: 10px;
     background: #28262E;
+    margin-bottom: 30px;
     border-radius: 40px;
     margin-right: 40px;
+    /* box-shadow: 0px 2px 25px 0px rgba(255,255,255, 0.7); */
+    animation: ${lights} 15s;
+    animation-iteration-count: infinite;
 `;
 
 export const Header = styled.header`
@@ -49,15 +90,16 @@ export const CardContent = styled.div`
     border-radius: 10px;
     background: rgba(207,206,206,0.3);
     height: 60px;
-    box-shadow: 0px 4px 25px 0px rgba(255,255,255, 0.2);
     transition: all;
-    transition-delay: 0.1px;
-    transition-duration: 0.7s;
-
+    transition-duration: 0.5s;
+    animation: ${appearFromLeft} 1s;
     &:hover{
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2); 
+        cursor: pointer;
+        background: rgba(207,206,206,0.5);
+        box-shadow: 0px 4px 25px 0px rgba(103,203,35, 0.3);
     }
-    
+
+   
     p{
         margin-left: 10px;
         font-size: 14px;
@@ -66,7 +108,24 @@ export const CardContent = styled.div`
     }
 
     span{
+        font-family: 'Roboto Slab';
         margin-left: 12px;
+        flex: 1;
+    }
+
+    section{
+        margin-right: 45px;
+
+        button{
+            margin-left: 5px;
+            width: 40px;
+            border: 0;
+            background: transparent;
+
+            svg{
+                font-size: 24px;
+            }
+        }
     }
 
 `;

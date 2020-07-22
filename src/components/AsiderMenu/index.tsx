@@ -1,20 +1,23 @@
 import React, { useState, useCallback } from 'react';
-import DayPicker from 'react-day-picker';
+import DayPicker, {DayModifiers} from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import {Container} from './style';
 
 const AsiderMenu: React.FC = () =>{
     const [selectedDate, setSelectedDate] = useState(new Date());
 
-    const handleDateChange = useCallback((date: Date) =>{
-        setSelectedDate(date)
-    },[])
+    const handleDateChange = useCallback((day: Date, modifiers: DayModifiers)=>{
+        if(modifiers.available && !modifiers.disabled){
+            setSelectedDate(day);
+        }
+    },[]);
 
     return(
         <Container>
              <DayPicker 
                         weekdaysShort={['D', 'S', 'T', 'Q', 'Q', 'S', 'S']}
                         onDayClick={handleDateChange}
+                        fromMonth={new Date()}
                         selectedDays={selectedDate}
                         // onMonthChange={handleMouthChange}
                         modifiers={{

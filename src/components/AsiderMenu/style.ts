@@ -3,7 +3,7 @@ import { shade } from 'polished';
 
 export const Container = styled.div`
     margin: 15px;
-
+    
     .DayPicker {
     background: #28262e;
     border-radius: 40px;
