@@ -28,11 +28,11 @@ const lights = keyframes`
 const appearFromLeft = keyframes`
     from{
         opacity: 0;
-        transform: translateX(0px);
+        transform: translateX(150px);
     }
     to{
         opacity: 1;
-        transform: translateX(-430px);
+        transform: translateX(0px);
     }
 `;
 
@@ -47,6 +47,14 @@ export const Container = styled.div`
     /* box-shadow: 0px 2px 25px 0px rgba(255,255,255, 0.7); */
     animation: ${lights} 15s;
     animation-iteration-count: infinite;
+
+    h3{
+        font-family: 'Roboto Slab';
+        color: #FAA91E;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
 `;
 
 export const Header = styled.header`
@@ -66,26 +74,18 @@ export const Header = styled.header`
 `;
 
 export const Content = styled.div`
-    margin-bottom: 25px; 
-    h3{
-        font-family: 'Roboto Slab';
-        color: #FAA91E;
-        margin-left: 30px;
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
-   
+    margin-bottom: 25px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;    
 `;
 
 
 export const CardContent = styled.div`
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     flex: 1;
     display: flex;
-    align-items: center;
-    width: 850px;
+    padding: 15px; 
+    width: 90%;
     margin-top: 15px;
     border-radius: 10px;
     background: rgba(207,206,206,0.3);
@@ -111,21 +111,6 @@ export const CardContent = styled.div`
         font-family: 'Roboto Slab';
         margin-left: 12px;
         flex: 1;
-    }
-
-    section{
-        margin-right: 45px;
-
-        button{
-            margin-left: 5px;
-            width: 40px;
-            border: 0;
-            background: transparent;
-
-            svg{
-                font-size: 24px;
-            }
-        }
     }
 
 `;
