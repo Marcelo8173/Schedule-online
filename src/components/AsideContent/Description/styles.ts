@@ -11,13 +11,17 @@ const appearFromTop = keyframes`
     }
 `;
 
+interface ContainerProps{
+    isShow: boolean;
+}
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
+    display: ${(props) => props.isShow ? 'initial': 'none'};
     width: 80%;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     margin-bottom: 10px;
     background: rgba(221,221,221,0.1);
-    animation: ${appearFromTop} 1s;
+    animation: ${appearFromTop} 0.2s;
 
     h2{
         margin-top: 15px;

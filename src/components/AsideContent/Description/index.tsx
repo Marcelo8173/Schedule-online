@@ -1,15 +1,23 @@
 import React from 'react';
 import { Container } from './styles';
 
-const Description:React.FC = () =>{
+interface dataNames{
+    id: number,
+    description: string; 
+}
+
+interface dataProps{
+    data: dataNames;
+    isShow: boolean;
+}
+
+
+
+const Description:React.FC<dataProps> = ({isShow,data}) =>{
     return (
-        <Container>
+        <Container isShow={data.id ? isShow: false} >
             <h2>Descrição</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Sapiente placeat nisi, illo, dignissimos exercitationem quae consequatur 
-                earum molestiae fugit repellat repellendus, aut consectetur! 
-                Officia porro temporibus deleniti. 
-                Eum, doloremque aspernatur!</p>
+            <p>{data.description}</p>
         </Container>
     )
 }

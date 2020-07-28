@@ -81,8 +81,11 @@ export const Content = styled.div`
 `;
 
 
-export const CardContent = styled.div`
+export const CardContent = styled.button`
+    border: 0;
+    text-decoration: none;
     flex: 1;
+    color: #FFFF;
     display: flex;
     padding: 15px; 
     width: 90%;
@@ -110,7 +113,6 @@ export const CardContent = styled.div`
     span{
         font-family: 'Roboto Slab';
         margin-left: 12px;
-        flex: 1;
     }
 
 `;
