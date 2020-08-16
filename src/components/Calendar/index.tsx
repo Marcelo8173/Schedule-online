@@ -15,13 +15,13 @@ const AsiderMenu: React.FC = () =>{
     return(
         <Container>
              <DayPicker 
-                        weekdaysShort={['D', 'S', 'T', 'Q', 'Q', 'S', 'S']}
+                        weekdaysShort={['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB']}
                         onDayClick={handleDateChange}
                         fromMonth={new Date()}
                         selectedDays={selectedDate}
                         // onMonthChange={handleMouthChange}
                         modifiers={{
-                            available: {daysOfWeek: [1,2,3,4,5,6]}
+                            available: {daysOfWeek: [0,1,2,3,4,5,6]}
                         }}
                         months ={[
                             'Janeiro',

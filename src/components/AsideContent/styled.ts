@@ -98,8 +98,6 @@ export const CardContent = styled.button`
     animation: ${appearFromLeft} 1s;
     &:hover{
         cursor: pointer;
-        background: rgba(207,206,206,0.5);
-        box-shadow: 0px 4px 25px 0px rgba(103,203,35, 0.3);
     }
 
    

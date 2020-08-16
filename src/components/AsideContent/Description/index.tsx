@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container } from './styles';
+import React, { useCallback, useState } from 'react';
+import { Container,Content } from './styles';
 
 interface dataNames{
     id: number,
@@ -13,11 +13,19 @@ interface dataProps{
 
 
 
-const Description:React.FC<dataProps> = ({isShow,data}) =>{
+const Description:React.FC<dataProps> = ({isShow,data,children}) =>{
+
+  
+
     return (
-        <Container isShow={data.id ? isShow: false} >
-            <h2>Descrição</h2>
-            <p>{data.description}</p>
+        <Container isShow={isShow} >
+            <Content>
+                <section>
+                    <h2>Descrição</h2>
+                    <p>{data.description}</p>
+                </section>
+               {children}
+            </Content>
         </Container>
     )
 }

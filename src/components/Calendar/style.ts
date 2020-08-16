@@ -3,10 +3,22 @@ import { shade } from 'polished';
 
 export const Container = styled.div`
     margin: 15px;
+    margin-left: 25px;
     
+    .DayPicker-Caption{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .DayPicker-Weekday{
+        color: black;
+        padding: 0.2rem;
+        font-size: 0.9rem;
+    }
+
     .DayPicker {
-    background: #28262e;
-    border-radius: 40px;
+    background: #FFFFFF;
+    border-radius: 20px;
     }
 
     .DayPicker-wrapper {
@@ -26,18 +38,19 @@ export const Container = styled.div`
 
     .DayPicker-Day {
     width: 40px;
+    font-size: 14px;
     height: 40px;
     }
 
     .DayPicker-Day--available:not(.DayPicker-Day--outside) {
-    background: #3e3b47;
     border-radius: 10px;
-    color: #fff;
+    
+    color: #383838;
     }
 
     .DayPicker:not(.DayPicker--interactionDisabled)
     .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
-    background: ${shade(0.2, '#3e3b47')};
+        background: ${shade(0.2, '#B77ACC')};
     }
 
     .DayPicker-Day--today {
@@ -50,7 +63,7 @@ export const Container = styled.div`
     }
 
     .DayPicker-Day--selected {
-    background:#9D80F2 !important;
+    background:#B77ACC !important;
     border-radius: 10px;
     color: #232129 !important;
     }

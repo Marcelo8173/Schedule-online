@@ -3,7 +3,7 @@ import {Container,Header,Content,CardContent} from './styled';
 import { format } from 'date-fns';
 import Description from './Description';
 import PtBr from 'date-fns/locale/pt-BR';
-
+import {BsArrowBarUp} from 'react-icons/bs';
 
 
 interface DataProps{
@@ -76,7 +76,11 @@ const AsideContent:React.FC = () =>{
                         </CardContent>
                         {console.log(data)}
                         {item.id === data.id ?
-                            <Description data={data} isShow={true}/>
+                            <Description data={data} isShow={true}>
+                                <button>
+                                    <BsArrowBarUp color="#FFFF" size={22}/>
+                                </button>
+                            </Description>
                             :
                             <Description data={data} isShow={false}/>
                         }
