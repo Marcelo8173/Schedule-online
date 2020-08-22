@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container,BodyContainer } from './style';
+import { Container,AsideContainer,Body } from './style';
 import Calendar from '../../components/Calendar';
-import AsideContent from '../../components/AsideContent';
 import PageHeader from '../../components/PageHeader';
 
 const Dashboard:React.FC = () =>{
     return(
         <Container>
-            <BodyContainer>
+            <AsideContainer>
                 <Calendar />
+            </AsideContainer>
+            <Body>
                 <PageHeader />
-            </BodyContainer>
+            </Body>
         </Container>
     )
 }

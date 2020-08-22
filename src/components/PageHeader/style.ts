@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    background: #FFFF;
-    height: inherit;
-`;
+
 
 export const ContentContainer = styled.div`
     display: flex;
+    background: #ffff;
+    align-items:center;
+    justify-content: center;
 `;
 
 export const Content = styled.section`
