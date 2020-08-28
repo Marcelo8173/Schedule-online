@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display:flex;
     margin-top: 25px;
+    align-items: flex-start;
 `;
 
 export const AsideContainer = styled.aside`

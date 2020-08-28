@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-    margin: 15px;
+    
+    margin-right: 15px;
     margin-left: 25px;
     
     .DayPicker-Caption{
