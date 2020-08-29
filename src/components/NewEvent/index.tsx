@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,ContentDate,ButtonContainer} from './styles';
+import { Container,ContentDate,ButtonContainer,ButtonAdd,ButtonEsc} from './styles';
 import Input from '../Input';
 
 const NewEvent:React.FC = () =>{
@@ -14,8 +14,8 @@ const NewEvent:React.FC = () =>{
             <Input type="text" placeholder="Descrição..."/>         
             
             <ButtonContainer>
-                <button>Adicionar</button>
-                <button>Cancelar</button>
+                <ButtonAdd>Adicionar</ButtonAdd>
+                <ButtonEsc>Cancelar</ButtonEsc>
             </ButtonContainer>
         </Container>
     );
