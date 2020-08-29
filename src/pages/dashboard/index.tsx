@@ -3,6 +3,7 @@ import { Container,AsideContainer,Body,SubTitle,ButtonContainer } from './style'
 import Calendar from '../../components/Calendar';
 import PageHeader from '../../components/PageHeader';
 import Commitments from '../../components/Commitments';
+import NewEvent from '../../components/NewEvent';
 import { FaAngleLeft,FaAngleRight } from 'react-icons/fa';
 
 
@@ -11,6 +12,7 @@ const Dashboard:React.FC = () =>{
         <Container>
             <AsideContainer>
                 <Calendar />
+                <NewEvent />
             </AsideContainer>
             <Body>
                 <PageHeader />
