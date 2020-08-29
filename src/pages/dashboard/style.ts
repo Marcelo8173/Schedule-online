@@ -13,19 +13,23 @@ export const AsideContainer = styled.aside`
 export const Body = styled.section`
     width: 100vw;
     margin-right: 35px;
-    div{
+    
+`;
+
+export const SubTitle = styled.div`
         display: flex;
-        align-content: center;
+        align-items: center;
         margin-bottom: 30px;
         h3{
             flex: 1;
             margin-left: 45px;
+            font-size: 16px;
         }
-    }
 `;
 
 export const ButtonContainer = styled.div`
     margin-right: 500px;
+    
     button{
         background: #FFFFFF;
         padding: 5px;
