@@ -5,3 +5,12 @@ export const Container = styled.div`
     margin: 25px;
     border-radius: 20px;
 `;
+
+export const ContentDate = styled.div`
+    display: flex;
+`;
+
+export const ButtonContainer = styled.div`
+    
+`;
+

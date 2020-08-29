@@ -7,7 +7,6 @@ export const Container = styled.div`
 `;
 
 export const AsideContainer = styled.aside`
- 
 `;
 
 export const Body = styled.section`
