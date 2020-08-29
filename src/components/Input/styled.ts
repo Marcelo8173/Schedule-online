@@ -6,6 +6,7 @@ export const DateInput = styled.div`
     margin-bottom: 10px;
     width: 87%;
     margin: 5px;
+    border-radius: 2px;
 
     input{
         border: 0;
@@ -13,7 +14,6 @@ export const DateInput = styled.div`
         height: 34px;
         &::placeholder{
             color: #474747;
-            
         }
     }
 `;

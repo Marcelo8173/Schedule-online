@@ -22,6 +22,10 @@ export const HourContainer = styled.div`
 export const ContentContainer = styled.div`
     margin-left: 25px;
 
+    h3{
+        font-size: 18px;
+    }
+
     p{
         font-size: 14px;
         color: #5B5B5B;
