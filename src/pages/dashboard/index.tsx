@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Container,AsideContainer,Body,SubTitle,ButtonContainer } from './style';
+import { format } from 'date-fns';
+import {ptBR} from 'date-fns/locale';
 import Calendar from '../../components/Calendar';
 import PageHeader from '../../components/PageHeader';
 import Commitments from '../../components/Commitments';
@@ -8,6 +10,15 @@ import { FaAngleLeft,FaAngleRight } from 'react-icons/fa';
 
 
 const Dashboard:React.FC = () =>{
+
+    const [date, setDate] = useState(new Date());
+
+    const formData = useMemo(() => {
+        return format(date, "'Hoje', dd 'de' MMMM",{
+            locale: ptBR,
+        });
+    },[date]);
+
     return(
         <Container>
             <AsideContainer>
@@ -17,7 +28,7 @@ const Dashboard:React.FC = () =>{
             <Body>
                 <PageHeader />
                 <SubTitle>
-                    <h3>Hoje, 16 de Maio de 2020</h3>
+                    <h3>{formData}</h3>
                     <ButtonContainer>
                         <button>
                             <FaAngleLeft color="#5F5959" size={20}/>
